@@ -20,7 +20,9 @@ func main() {
 	profit := float64(ebt) * (1 - taxRate/100)
 	ratio := ebt / int(profit)
 
+	formattedProfit := fmt.Sprintf("Earnings Before Tax: %.1f", profit)
+
 	fmt.Println(ebt)
-	fmt.Println(profit)
+	fmt.Println(formattedProfit)
 	fmt.Println(ratio)
 }
