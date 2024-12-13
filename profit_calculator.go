@@ -7,13 +7,13 @@ func main() {
 	var expenses int
 	var taxRate float64
 
-	fmt.Print("Revenue: ")
+	outputText("Revenue: ")
 	fmt.Scan(&revenue)
 
-	fmt.Print("Expenses: ")
+	outputText("Expenses: ")
 	fmt.Scan(&expenses)
 
-	fmt.Print("Tax Rate: ")
+	outputText("Tax Rate: ")
 	fmt.Scan(&taxRate)
 
 	ebt := revenue - expenses // earnings before tax
@@ -25,4 +25,8 @@ func main() {
 	fmt.Println(ebt)
 	fmt.Println(formattedProfit)
 	fmt.Println(ratio)
+}
+
+func outputText(text string) {
+	fmt.Print(text)
 }
